@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Post Details</title>
+</head>
+<body>
+   <h2>{{post.title}}</h2>
+   {{post.text}} <br>
+   {{post.author}} <br>
+   {{post.created_date}} <br>
+   <a href="{% url 'post_list'%}">POSTS</a>
+</body>
+</html>

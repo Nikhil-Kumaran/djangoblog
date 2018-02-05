@@ -4,16 +4,24 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
    <title>Blog app</title>
 </head>
 <body>
-   <h1>POST LISTS</h1>
-   <div>
-      {%for post in posts%}
-         <h1>{{post.title}}</h1>
-         <p>{{post.text}}</p>
-         <p>{{post.created_date}}</p>
-      {%endfor%}
+   <div class="container">
+      <h2>POST LISTS</h2>
+      <div>
+         {%for post in posts%}
+            <a href="{% url 'details' id=post.id %}"><h3>{{post.title}}</h3></a>
+            <p>{{post.text}}</p>
+            <p>{{post.created_date}}</p>
+         {%endfor%}
+      </div>
    </div>
 </body>
 </html>
